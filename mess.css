@@ -1,0 +1,19 @@
+body {
+    
+    background-position: center center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: cursive;
+}
+
+.login-box {
+    width: 900px;
+    height: 685px;
+    background: radial-gradient(rgba(249, 246, 246, 0.6));
+    box-shadow: 5px 10px 20px rgb(7, 6, 6);
+    backdrop-filter: blur(3px);
+    border-radius: 20px;
+}
+

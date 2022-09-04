@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Portfolio Header</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Kanit&family=Poppins:wght@200&family=Righteous&family=Russo+One&family=Ubuntu+Mono&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: rgb(213,219,218);
+        }
+        .card{
+            width: 300px;
+            height: 800px;
+            border-radius: 7px;
+            padding: 30px 20px;
+            box-shadow: 2px 3px 5px rgba(0,0,0,0.2),
+            -1px -2px 5px rgb(255,255,255);
+        }
+        .back{
+            position: fixed;
+            top: 140px;
+            right: 840px;
+            cursor: pointer;
+        }
+        .more{
+            position: fixed;
+            top: 140px;
+            left: 840px;
+            cursor: pointer;
+        }
+        .profile{
+            width: 100px;
+            height: 100px;
+            border: 10px solid rgb(213,219,218);
+            box-shadow: 7px 7px 7px rgba(0,0,0,0.2),
+            -1px -2px 5px rgb(255,255,255);
+            border-radius: 50%;
+            background-image: url('file:///C:/Users/jeetu%20soni/Dropbox/My%20PC%20(LAPTOP-PFL5EQ03)/Desktop/aryan/aryan.png.jpeg');
+            box-shadow: 2px 3px 5px rgba(7, 0, 0, 0.2);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin-left: 80px;
+            cursor: pointer;
+        }
+        h3{
+            text-align: center;
+            margin-top: 10px;
+        }
+        p{
+            text-align: center;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        .social-icons{
+            display: flex;
+            margin: 10px 0 0 25px;
+        }
+        .all-social{
+            margin-left: 10px;
+            width: 40px;
+            height: 40px;
+            font-size: 20px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(213,219,218);
+            box-shadow: 2px 3px 5px rgba(0,0,0,0.2),
+            -1px -2px 5px rgb(255,255,255);
+        }
+ 
+        .icon-bar{
+            display: flex;
+            margin: 10px 0 0 25px;
+            border-radius: 50%;
+        }
+        
+        .icon-bar a {
+            display: flex;
+          
+            border-radius: 50%;
+            text-align: center;
+            padding: 16px;
+            transition: all 0.3s ease;
+            color: white;
+            font-size: 20px;
+        }
+        
+        .icon-bar a:hover {
+            background-color: #000;
+        }
+        
+        .facebook {
+            background: #3B5998;
+            color: white;
+        }
+      
+        
+        .twitter {
+            background: #55ACEE;
+            color: white;
+        }
+        
+       
+        .instagram{
+            background: #f1497b;
+            color: rgb(238, 76, 76);
+        }
+        
+        .youtube {
+            background: #bb0000;
+            color: white;
+        }
+        
+        .btn{
+            display: flex;
+            margin: 20px 0 0 2px;
+        }
+
+        
+        
+        .message{
+            width: 120px;
+            height: 40px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(5, 216, 253);
+            box-shadow: 2px 3px 5px rgba(106, 190, 247, 0.2),
+            -1px -2px 5px rgb(5, 216, 253);
+        }
+        .message a{
+            font-weight: bold;
+            font-size: 18px;
+            color: rgb(252, 248, 248);
+            text-decoration: none;
+        }
+        .message:hover{
+            background-color: rgb(13, 245, 245);
+        }
+        .subscribe{
+            width: 120px;
+            height: 40px;
+            border-radius: 5px;
+            margin-left: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(250, 6, 6);
+            box-shadow: 2px 3px 5px rgba(65, 3, 3, 0.2),
+            -1px -2px 5px rgb(240, 31, 31);
+        }
+        .subscribe a{
+            font-weight: bold;
+            font-size: 18px;
+            color: rgb(253, 251, 251);
+            text-decoration: none;
+        }
+        .subscribe:hover{
+            background-color: rgb(151, 4, 4);
+        }
+     
+        
+       
+        .down-icon{
+            display: flex;
+            margin: 10px 0 0 25px;
+            border-radius: 50%;
+            padding-left: 10px;
+        }
+        .all-social-down{
+            margin-left: 10px;
+            width: 90px;
+            height: 80px;
+            font-size: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            background-color: rgb(213,219,218);
+            box-shadow: 2px 3px 5px rgba(0,0,0,0.2),
+            -1px -2px 5px rgb(255,255,255);
+        }
+       
+        .down-icon-bar{
+            display: flex;
+            margin: 10px 0 0 25px;
+            border-radius: 50%;
+        }
+        .down-icon-bar a {
+            display: flex;
+            text-align: center;
+            padding: 16px;
+            transition: all 0.3s ease;
+            color: white;
+            font-size: 20px;
+        }
+     
+
+        .like {
+            background: #f34a4a;
+            color: rgb(242, 39, 39);
+            cursor: pointer;
+            border-radius: 50%;
+        }
+        .like:hover{
+            background-color:rgb(85, 4, 4);
+        }
+        .like a:hover{
+            background-color:rgb(85, 4, 4);
+        }
+        .comment{
+            background: #046bb9;
+            color: #046bb9;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+        .comment:hover{
+            background-color:rgb(66, 93, 246)
+        }
+        .comment a:hover{
+            background-color:rgb(66, 93, 246);
+        }
+        .share{
+            background: #03f5d1;
+            color: #03f5d1;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+        .share :hover{
+            background-color:#03f5d1;
+        }
+        .share a:hover{
+            background-color:#03f5d1;
+
+        }
+        .btn{
+            display: flex;
+            margin: 20px 0 0 2px;
+        }
+        .tom-icon{
+            display: flex;
+            margin: 30px 0 0 0;
+        }
+        .l{
+            width: 90px;
+            height: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 15px;
+        }
+        .c{
+            width: 90px;
+            height: 20px;
+            border-left: 2px solid rgb(187,187,187);
+            border-right: 2px solid rgb(187,187,187);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 15px;
+        }
+        .s{
+            width: 90px;
+            height: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 15px;
+        }
+        .container{
+            display: flex;
+            margin: 30px 0 0 0;
+            width: 90px;
+            height: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 15px;
+        }
+        span{
+            margin-left: 5px;
+            font-weight: 600;
+            
+        }
+    </style> 
+</head>
+<body>
+    <header>
+    <div class="card">
+        
+        <div class="dropdown">
+        <div class="dropdown" style="cursor:pointer" class="btn btn-info dropdown-toggle" type="div" data-toggle="dropdown"><span class="caret"></span></div>
+        <ul class="dropdown-menu">
+            <li class="dropdown-header">Social Networks</li>
+            <li><a href="https://instagram.com/dark_fighterz?igshid=YmMyMTA2M2Y=">INSTAGRAM</a></li>
+            <li><a href="https://www.facebook.com/profile.php?id=100057573968912">FACEBOOK</a></li>
+            <li><a href="https://wa.me/+916388965854">WHATSAPP</a></li>
+            <li class="divider"></li>
+            <li class="dropdown-header">LANGUAGES KNOWN</li>
+            <li><a href="https://htmlcheatsheet.com/">HTML</a></li>
+            <li><a href="https://htmlcheatsheet.com/css/">CSS</a></li>
+            <li><a href="https://hackerthemes.com/bootstrap-cheatsheet/">BOOTSTRAP</a></li>
+            <li><a href="https://nerdcave.com/tailwind-cheat-sheet">TAILWINDCSS</a></li>
+            <li><a href="https://www.codewithharry.com/blogpost/c-cheatsheet/">C</a></li>
+            <li><a href="https://www.codewithharry.com/blogpost/cpp-cheatsheet/">C++</a></li>
+            <li><a href="https://htmlcheatsheet.com/js/">JAVA SCRIPT</a></li>
+            <li><a href="https://introcs.cs.princeton.edu/java/11cheatsheet/">JAVA</a></li>
+            <li><a href="https://education.github.com/git-cheat-sheet-education.pdf">GIT HUB</a></li>
+            <li><a href="https://www.pythoncheatsheet.org/">PYTHON</a></li>
+            <li><a href="https://websitesetup.org/php-cheat-sheet/">PHP</a></li>
+
+
+            <li class="divider"></li>
+            <li><a href="jaryansingh11052001@gmail.com.html">MAIL US</a></li>
+          </ul>
+    
+          
+        </div>
+        <div class="profile"></div><br>
+        <h3><b><u><a  style="color:rgb(4, 4, 85)" href="https://instagram.com/dark_fighterz?igshid=YmMyMTA2M2Y=" style="cursor:pointer">dark_fighterz</a></u></b></h3>
+        <h3><em><i>Software Development Company</i></em></h3><br>
+        <div class="social-icons">
+                <a href="#">
+                    <icon-icon name="logo-facebook"></icon-icon>
+                </a>
+                <a href="#">
+                    <icon-icon name="logo-instagram"></icon-icon>
+                </a>
+                <a href="#">
+                    <icon-icon name="logo-twitter"></icon-icon>
+                </a>
+                <a href="#">
+                    <icon-icon name="logo-instagram"></icon-icon>
+                </a>
+             
+               
+            </div>
+            <div class="icon-bar">
+            <div class="facebook all-social"><a href="https://www.facebook.com/" class="facebook"><i class="fa-brands fa-facebook"></i></a></div><br>
+            <div class="twitter all-social"><a href="https://www.twitter.com/" class="twitter"><i class="fa-brands fa-twitter"></i></a> </div><br>         
+            <div class="youtube all-social"><a href="https://youtube.com/channel/UC_snX7bKzmaAH9tvIhREJGw" class="youtube"><i class="fa-brands fa-youtube-square"></i></a></div><br>
+            <div class="instagram all-social"><a href="https://instagram.com/dark_fighterz?igshid=YmMyMTA2M2Y=" class="instagram"><i class="fa-brands fa-instagram-square"></i></a></div><br>
+            </div>
+            <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+        <br>
+        <div class="btn">
+            <div class="message"><a href="message.html">Message</a></div>
+            <div class="subscribe"><a href="resume.html">Resume</a></div>
+        </div>
+        <br>
+        <h3>Please <i>'like', 'share',</i> and <i>'comment',</i></h3>
+       
+            <div class="down-icon">
+                <a href="#">
+                    <icon-icon name="logo-like"></icon-icon>
+                </a>                           
+                <a href="#">
+                    <icon-icon name="logo-comment"></icon-icon>
+                </a>                
+                <a href="#">
+                    <icon-icon name="logo-share"></icon-icon>
+                </a>
+                            
+        </div>
+        <div class="down-icon-bar">
+           <div class="l all-social-down"><a class="like"><i class="fa-solid fa-heart"></i></a></div>
+           <div class="c all-social-down"><a class="comment"><i class="fa-solid fa-comments"></i></a></div>
+           <div class="s all-social-down"><a class="share"><i class="fa-solid fa-share-from-square"></i></a></div>
+        </div>
+        
+        <div class="tom-icon">
+            <div class="l">
+            <span>462k</span>
+            </div>
+            <div class="c">
+                <span>173k</span>
+            </div>
+            <div class="s">
+                <span>148k</span>
+            </div>
+
+
+
+              </div>
+              
+        <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    </div>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+</header>
+
+
+</body>
+</html>
